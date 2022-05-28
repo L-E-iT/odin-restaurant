@@ -1,0 +1,102 @@
+/* Roots and Utils */
+
+:root {
+    --raw-umber: #7e6551ff;
+    --rocket-metallic: #938581ff;
+    --deep-space-sparkle: #466362ff;
+    --shadow-blue: #8896abff;
+    --beau-blue: #c5d5e4ff;
+    --cursive-font: 'Dancing Script', cursive;
+    --text-font: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--text-font);
+    background-color: floralwhite;
+}
+
+body {
+    margin: 0;
+}
+
+/* Content Layout */
+
+.content {
+    height: 100vh;
+    max-height: max-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Header */
+
+.header {
+    font-family: var(--cursive-font);
+    color: var(--raw-umber);
+    font-size: 5em;
+}
+
+/* Navigation */
+
+.navigation {
+    color: var(--raw-umber);
+    overflow: hidden;
+}
+
+.navigation-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -1px;
+    padding: 16px 0;
+}
+
+.navigation-list-item {
+    flex-grow: 1;
+    flex-basis: auto;
+    text-align: center;
+    border-left: var(--raw-umber) 1px solid;
+    padding: 0 16px;
+}
+
+.navigation-list-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    cursor: pointer;
+}
+
+.navigation-list-item:active {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+/* Site Content */
+.site-content {
+}
+
+/* Call To Action */
+.testimonial {
+    width: 60vw;
+}
+
+.testimonial p {
+    font-family: var(--cursive-font);
+}
+
+.testimonial-author {
+    padding-left: 24px;
+}
+
+/* Footer */
+
+.footer {
+    padding: 24px;
+    margin-top: auto;
+    width: 100vw;
+    color: var(--raw-umber);
+}
