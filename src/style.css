@@ -23,9 +23,8 @@ body {
 /* Content Layout */
 
 .content {
-    height: 100vh;
-    max-height: max-content;
     width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -51,6 +50,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-left: -1px;
     padding: 16px 0;
@@ -70,25 +70,80 @@ body {
     cursor: pointer;
 }
 
-.navigation-list-item:active {
+.active {
     text-decoration: underline;
     text-underline-offset: 8px;
 }
 
 /* Site Content */
 .site-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 48px;
 }
 
-/* Call To Action */
-.testimonial {
+.site-content p {
+    margin: 0;
+    padding: 4px;
+}
+
+.site-content-grid {
+    width: 90vw;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-rows: repeat(auto-fill, max-content);
+    grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.site-content-flex {
+    display: flex;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(1fr, max-content));
+    grid-template-columns: repeat(2, minmax(1fr, max-content));
+    grid-template-areas:
+    "name price"
+    "desc desc";
+}
+
+.menu-item-name {
+    font-size: 1.2em;
+    grid-area: name;
+}
+
+.menu-item-description {
+    font-size: .75em;
+    font-weight: lighter;
+    grid-area: desc;
+}
+
+.menu-item-price {
+    font-size: .75em;
+    text-align: right;
+    grid-area: price;
+}
+
+/* Reviews */
+.review {
     width: 60vw;
+    margin-top: auto;
 }
 
-.testimonial p {
+.review p {
     font-family: var(--cursive-font);
 }
 
-.testimonial-author {
+.review-rating {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-author {
     padding-left: 24px;
 }
 
@@ -96,7 +151,8 @@ body {
 
 .footer {
     padding: 24px;
-    margin-top: auto;
     width: 100vw;
     color: var(--raw-umber);
+    font-size: .5em;
+    text-align: center;
 }

@@ -1,5 +1,9 @@
 import './style.css'
-import json from './data/testimonial.json'
+import json from './data/reviews.json'
+import StarSVG from './images/star.svg'
+import StarOutlineSVG from './images/star-outline.svg'
+import {generateSiteContent} from "./tabs/tabs";
+require('./tabs/tabs');
 
 const body = document.querySelector("body");
 const content = document.createElement("div");
@@ -26,7 +30,16 @@ function createNav() {
        const navLi = document.createElement("li");
        navLi.classList.add("navigation-list-item");
        navLi.textContent = pageText;
-       navUl.appendChild(navLi)
+       navUl.appendChild(navLi);
+       navLi.addEventListener("click", (e) => {
+           generateSiteContent(pageText);
+           const current = document.getElementsByClassName("active");
+           current[0].className = current[0].className.replace(" active", "");
+           e.target.classList.add("active");
+       });
+       if (pageText === "Breakfast") {
+           navLi.classList.add("active");
+       }
     });
 
     navContainer.appendChild(navUl);
@@ -38,41 +51,50 @@ function createSiteContent() {
     const siteContent = document.createElement("div");
     siteContent.classList.add("site-content");
 
-    const siteContentText = document.createElement("div");
-    siteContentText.classList.add("site-content-display");
-    siteContentText.textContent = "This is going to be a list of food";
-
-    siteContent.appendChild(siteContentText);
-
     return siteContent;
 }
 
-function createTestimonial() {
-    const testimonialJson = json.Testimonials;
-    const testimonialIndex =  Math.floor(Math.random() * 4);
+function createReview() {
+    const reviewJson = json.reviews;
+    const reviewIndex =  Math.floor(Math.random() * 4);
 
-    const testimonial = document.createElement("div");
-    testimonial.classList.add("testimonial");
+    const review = document.createElement("div");
+    review.classList.add("review");
 
-    const testimonialText = document.createElement("p");
-    testimonialText.classList.add("testimonial-text");
-    testimonialText.textContent = testimonialJson[testimonialIndex].text;
+    const reviewText = document.createElement("p");
+    reviewText.classList.add("review-text");
+    reviewText.textContent = reviewJson[reviewIndex].text;
 
-    const testimonialAuthor = document.createElement("p");
-    testimonialAuthor.classList.add("testimonial-author");
-    testimonialAuthor.textContent = "- " + testimonialJson[testimonialIndex].author + " "
-        + "*".repeat(testimonialJson[testimonialIndex].rating);c
+    const reviewRating = document.createElement("div");
+    reviewRating.classList.add("review-rating");
 
-    testimonial.appendChild(testimonialText);
-    testimonial.appendChild(testimonialAuthor);
+    // Add Review stars
+    for (let i = 0; i < reviewJson[reviewIndex].rating; i++) {
+        const star = new Image();
+        star.src = StarSVG;
+        reviewRating.appendChild(star);
+    }
+    for (let i = 5; i > reviewJson[reviewIndex].rating; i--) {
+        const starOutline = new Image();
+        starOutline.src = StarOutlineSVG;
+        reviewRating.appendChild(starOutline);
+    }
 
-    return testimonial;
+    const reviewAuthor = document.createElement("p");
+    reviewAuthor.classList.add("review-author");
+    reviewAuthor.textContent = "- " + reviewJson[reviewIndex].author
+
+    review.appendChild(reviewText);
+    review.appendChild(reviewRating);
+    review.appendChild(reviewAuthor);
+
+    return review;
 }
 
 function createFooter() {
     const footer = document.createElement("div")
     footer.classList.add("footer");
-    footer.textContent = "This is a footer";
+    footer.textContent = "© CityFood";
 
     return footer;
 }
@@ -80,7 +102,9 @@ function createFooter() {
 content.appendChild(createHeader());
 content.appendChild(createNav());
 content.appendChild(createSiteContent());
-content.appendChild(createTestimonial());
+content.appendChild(createReview());
 content.appendChild(createFooter());
 
 body.appendChild(content);
+
+generateSiteContent("Breakfast");

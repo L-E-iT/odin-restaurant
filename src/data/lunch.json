@@ -1,0 +1,49 @@
+{
+  "menuItems": [
+    {
+      "name": "Chicken Tenders",
+      "description": "Golden brown chicken tender goodness.",
+      "price": "5"
+    },
+    {
+      "name": "Burger and Fries",
+      "description": "1/4 burger with a side of cripsy fries.",
+      "price": "7"
+    },
+    {
+      "name": "Grilled Cheese-y",
+      "description": "Crispy and gooey grilled cheese.",
+      "price": "4"
+    },
+    {
+      "name": "Tomato Soup",
+      "description": "Delicious bowl of warm tomato soup. Add a Grilled cheese for $3 more.",
+      "price": "3"
+    },
+    {
+      "name": "Chicken Salad",
+      "description": "Homemade chicken salad between two toasted buns.",
+      "price": "6"
+    },
+    {
+      "name": "Salad With Chicken",
+      "description": "A salad with shredded chicken. Not to be confused with a Chicken Salad.",
+      "price": "6"
+    },
+    {
+      "name": "Gloria's Burrito",
+      "description": "Gloria's special burrito filled with whatever Gloria bought today.",
+      "price": "8"
+    },
+    {
+      "name": "Spaghetti",
+      "description": "Homemade noodles and sauce served with a slice of garlic bread.",
+      "price": "9"
+    },
+    {
+      "name": "Steak",
+      "description": "We always serve steak. Cooked to order.",
+      "price": "14"
+    }
+  ]
+}

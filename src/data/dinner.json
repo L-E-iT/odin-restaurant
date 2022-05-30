@@ -1,0 +1,54 @@
+{
+  "menuItems": [
+    {
+      "name": "Burger and Fries",
+      "description": "1/4 burger with a side of cripsy fries.",
+      "price": "7"
+    },
+    {
+      "name": "Salad With Chicken",
+      "description": "A salad with shredded chicken. Not to be confused with a Chicken Salad.",
+      "price": "6"
+    },
+    {
+      "name": "Gloria's Burrito",
+      "description": "Gloria's special burrito filled with whatever Gloria bought today.",
+      "price": "8"
+    },
+    {
+      "name": "Spaghetti",
+      "description": "Homemade noodles and sauce served with a slice of garlic bread.",
+      "price": "9"
+    },
+    {
+      "name": "Steak",
+      "description": "We always serve steak. Cooked to order.",
+      "price": "14"
+    },
+    {
+      "name": "Fried Catfish",
+      "description": "We caught it outback and we swear its fresh.",
+      "price": "15"
+    },
+    {
+      "name": "Fried Chicken",
+      "description": "Homegrown Chicken plucked and friend to order",
+      "price": "16"
+    },
+    {
+      "name": "Caesar Salad",
+      "description": "A delicious Caesar salad. Who doesn't love Caesar salad.",
+      "price": "7"
+    },
+    {
+      "name": "Clam Chowder",
+      "description": "Warm, creamy clam chowder served in a breadbowl",
+      "price": "13"
+    },
+    {
+      "name": "Toast",
+      "description": "Toast, but for dinner!",
+      "price": "4"
+    }
+  ]
+}

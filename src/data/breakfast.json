@@ -1,0 +1,54 @@
+{
+  "menuItems": [
+    {
+      "name": "Two Eggs",
+      "description": "Two eggs, cooked to order.",
+      "price": 4
+    },
+    {
+      "name": "Three Eggs",
+      "description": "Three eggs, but this time we pick how they are cooked.",
+      "price": 6
+    },
+    {
+      "name": "Toast",
+      "description": "It's just toasted bread.",
+      "price": 2
+    },
+    {
+      "name": "Toast, twice",
+      "description": "Two toasts, slightly burned, but we call it the city crisp.",
+      "price": 4
+    },
+    {
+      "name": "Sausage Omelette",
+      "description": "An omelette made entirely of sausage. We don't use the word \"patty\" here.",
+      "price": 5
+    },
+    {
+      "name": "Egg Omelette",
+      "description": "Our \"traditional\" breakfast omelette, made entirely of duck eggs.",
+      "price": 6
+    },
+    {
+      "name": "Millennial Toast",
+      "description": "Toast with Avocado on top.",
+      "price": 12
+    },
+    {
+      "name": "Fourteen Eggs",
+      "description": "14 whole eggs, uncooked, served in a bowl.",
+      "price": 14
+    },
+    {
+      "name": "Steak'n'Eggs",
+      "description": "Steak with eggs. Cooked to order.",
+      "price": 16
+    },
+    {
+      "name": "Steak'n'Sausage",
+      "description": "Mountains of Steak and rivers of Sausage. Only for the hungriest of people.",
+      "price": 0
+    }
+  ]
+}
