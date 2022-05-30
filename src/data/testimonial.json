@@ -1,0 +1,24 @@
+{
+  "Testimonials": [
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa ducimus eos ex explicabo incidunt ipsam, natus perferendis provident quia rem sapiente, veniam veritatis. Earum quas, qui? A nisi, quae!",
+      "author": "Yes Man",
+      "rating": 3
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa, doloribus? Alias consequuntur cum, dicta dolorem enim et hic impedit ipsa, ipsum omnis qui quibusdam quod quos sit soluta suscipit!",
+      "author": "The Vault Dweller",
+      "rating": 4
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ex quia sequi temporibus? Autem cupiditate deleniti dolorem doloribus earum, exercitationem id labore maxime officiis placeat provident quas soluta tempora, tenetur.",
+      "author": "The Lone Wanderer",
+      "rating": 5
+    },
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cum cupiditate dolor, expedita facere pariatur quibusdam sint. A ab animi libero mollitia porro quidem repellat, voluptate! Nihil quasi quidem ratione.",
+      "author": "CheapEater123",
+      "rating": 1
+    }
+  ]
+}
