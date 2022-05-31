@@ -17,7 +17,6 @@ function createHeader() {
 
 function createNav() {
     const pages = ["Breakfast","Lunch","Dinner"];
-    // const pages = ["Breakfast","Lunch","Dinner","Reservations","About"];
 
     const navContainer = document.createElement("div");
     navContainer.classList.add("navigation");
@@ -49,6 +48,7 @@ function createNav() {
 function createSiteContent() {
     const siteContent = document.createElement("div");
     siteContent.classList.add("site-content");
+    siteContent.classList.add("site-content-grid")
 
     return siteContent;
 }
@@ -69,4 +69,5 @@ content.appendChild(createFooter());
 
 body.appendChild(content);
 
-generateSiteContent("Breakfast");
+// Initial population of site content
+generateSiteContent();
