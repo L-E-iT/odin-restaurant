@@ -4,7 +4,8 @@ const path = require('path');
 module.exports = {
     entry: {
         index: './src/index.js',
-        tabs: './src/tabs/tabs.js'
+        tabs: './src/modules/tabs.js',
+        reviews: './src/modules/reviews.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -16,10 +17,6 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
-            // {
-            //     test: /\.svg$/i,
-            //     use: ["svg-inline-loader"]
-            // },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: ["file-loader"]

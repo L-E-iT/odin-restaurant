@@ -1,6 +1,7 @@
 import breakfastData from '../data/breakfast.json'
 import lunchData from '../data/lunch.json'
 import dinnerData from '../data/dinner.json'
+import aboutData from '../data/about.json'
 
 function _clearSiteContent(siteContent) {
     while (siteContent.firstChild) {
@@ -19,12 +20,13 @@ function _toggleSiteContentGrid(isGrid, _siteContent) {
 }
 
 function _createReservationContent(_siteContent) {
-
+//TODO create this reservation form
 }
 
-function _createAboutContent(_siteContent){
+function _createAboutContent(aboutData, _siteContent){
     const aboutSection = document.createElement("div")
-    aboutSection.textContent = "This is where we would keep the about section... IF WE HAD ONE"
+    aboutSection.classList.add("about")
+    aboutSection.textContent = aboutData.text;
     _siteContent.appendChild(aboutSection)
 }
 
@@ -76,11 +78,12 @@ function generateSiteContent(tabChoice) {
             _toggleSiteContentGrid(false, _siteContent);
             break;
         case "about":
-            _createAboutContent(_siteContent);
+            _createAboutContent(aboutData, _siteContent);
             _toggleSiteContentGrid(false, _siteContent);
             break;
         default:
             _createMenuContent(breakfastData.menuItems, _siteContent);
+            _toggleSiteContentGrid(true, _siteContent);
     }
 }
 

@@ -1,9 +1,7 @@
 import './style.css'
-import json from './data/reviews.json'
-import StarSVG from './images/star.svg'
-import StarOutlineSVG from './images/star-outline.svg'
-import {generateSiteContent} from "./tabs/tabs";
-require('./tabs/tabs');
+import {generateSiteContent} from "./modules/tabs";
+import {createReviewObject} from "./modules/reviews";
+require('./modules/tabs');
 
 const body = document.querySelector("body");
 const content = document.createElement("div");
@@ -18,7 +16,8 @@ function createHeader() {
 }
 
 function createNav() {
-    const pages = ["Breakfast","Lunch","Dinner","Reservations","About"];
+    const pages = ["Breakfast","Lunch","Dinner"];
+    // const pages = ["Breakfast","Lunch","Dinner","Reservations","About"];
 
     const navContainer = document.createElement("div");
     navContainer.classList.add("navigation");
@@ -54,43 +53,6 @@ function createSiteContent() {
     return siteContent;
 }
 
-function createReview() {
-    const reviewJson = json.reviews;
-    const reviewIndex =  Math.floor(Math.random() * 4);
-
-    const review = document.createElement("div");
-    review.classList.add("review");
-
-    const reviewText = document.createElement("p");
-    reviewText.classList.add("review-text");
-    reviewText.textContent = reviewJson[reviewIndex].text;
-
-    const reviewRating = document.createElement("div");
-    reviewRating.classList.add("review-rating");
-
-    // Add Review stars
-    for (let i = 0; i < reviewJson[reviewIndex].rating; i++) {
-        const star = new Image();
-        star.src = StarSVG;
-        reviewRating.appendChild(star);
-    }
-    for (let i = 5; i > reviewJson[reviewIndex].rating; i--) {
-        const starOutline = new Image();
-        starOutline.src = StarOutlineSVG;
-        reviewRating.appendChild(starOutline);
-    }
-
-    const reviewAuthor = document.createElement("p");
-    reviewAuthor.classList.add("review-author");
-    reviewAuthor.textContent = "- " + reviewJson[reviewIndex].author
-
-    review.appendChild(reviewText);
-    review.appendChild(reviewRating);
-    review.appendChild(reviewAuthor);
-
-    return review;
-}
-
 function createFooter() {
     const footer = document.createElement("div")
     footer.classList.add("footer");
@@ -102,7 +64,7 @@ function createFooter() {
 content.appendChild(createHeader());
 content.appendChild(createNav());
 content.appendChild(createSiteContent());
-content.appendChild(createReview());
+content.appendChild(createReviewObject());
 content.appendChild(createFooter());
 
 body.appendChild(content);

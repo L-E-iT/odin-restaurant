@@ -2,7 +2,7 @@
   "reviews": [
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa ducimus eos ex explicabo incidunt ipsam, natus perferendis provident quia rem sapiente, veniam veritatis. Earum quas, qui? A nisi, quae!",
-      "author": "Yes Man",
+      "author": "The Sole Survivor",
       "rating": 3
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cum cupiditate dolor, expedita facere pariatur quibusdam sint. A ab animi libero mollitia porro quidem repellat, voluptate! Nihil quasi quidem ratione.",
-      "author": "CheapEater123",
+      "author": "The Courier",
       "rating": 1
     }
   ]
